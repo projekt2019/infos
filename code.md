@@ -1,0 +1,6 @@
+- Projekt ist aufgeteilt in Formen(Laura), Konnektor(Leo) und Server(Till)
+- Klassen in neuen Dateien
+- Kommentare, die den Code erklären
+- Möglichst in Methoden und Klassen aufteilen, Modulisierung
+- Try-Catch Verwenden, Exeptions abfangen
+- Möglichst englische Formulierungen
