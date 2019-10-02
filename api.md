@@ -13,10 +13,10 @@ Bei dem Server ist in der Regel nur der Port relevant, da die IP die eigene ist(
 
 ## Events
 
-Es gibt verschiedene Events, die auftreten können, nachdem eine Verbindung hergestellt wurde. Die Eventhandler sind Actions(=Prozeduren), die mittels `AddressOf` übergeben werden:
+Es gibt verschiedene Events, die auftreten können, nachdem eine Verbindung hergestellt wurde. Die Eventhandler sind EventNotifier(=Liste von Prozeduren), die mittels `AddressOf` übergeben werden:
 
 ```vb
-Connector.OnRecieve = AddressOf recieveHandler
+Connector.OnRecieve.addHandler(AddressOf recieveHandler)
 
 Private Sub recieveHandler(msg as String)
   ... ' mach was mit dem String
@@ -38,3 +38,8 @@ Erst dann können Nachrichten übertragen werden.
 ```vb
 Connector.connect()
 ```
+
+# EventNotifier
+
+Ein EventNotifier hält eine Liste von Methoden, die alle mit einer übergeordneten Prozedur(Notify) benachrichtigt und ausgeführt werden.
+Es ermöglicht mehrere Empfängermethoden mit einem Ereignes(z.B OnRecieve) aufzurufen.
